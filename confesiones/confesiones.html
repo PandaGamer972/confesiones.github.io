@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <title>Confesiones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff0000;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .message {
+      font-size: 20px;
+      margin: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      margin: 20px;
+    }
+
+    .button:hover {
+      background-color: #3e8e41;
+    }
+
+    .tweet-box {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.tweet-box textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  resize: none;
+}
+
+.tweet-box button {
+  float: right;
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      
+      background:  #fff url(/img/ottawa.jpg) center center/cover repeat content-box;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Confesiones</h1>
+  </header>
+
+  <div class="container">
+    <p class="message">Este es el lugar para confesar algo.</p>
+    <a href="#" class="button" onclick="confessLove()">Confesar delito</a>
+    <a href="#" class="button" onclick="confessFriendship()">Testigos </a>
+  </div>
+
+  <div class="tweet-box">
+    <textarea placeholder="escribe tu confesion"></textarea>
+    <button>Tweet</button>
+  </div>
+  
+
+  <footer class="footer">
+    <p>Copyright © 2021</p>
+    <script src="app.js"></script>
+
+  </footer>
+
+<script>
+    function confessLove() {
+        var loveConfession = prompt("Escribe tu delito:");
+        if (loveConfession != null) {
+            alert("Tu confesión de delito ha sido enviada: " + loveConfession);
+        }
+    }
+    function confessFriendship() {
+        var friendshipConfession = prompt("Escribe lo que viste como testigo:");
+        if (friendshipConfession != null) {
+            alert("Tu confesion como testigo ha sido enviada: " + friendshipConfession);
+        }
+    }
+</script>
+
+</body>
+
+</html>
